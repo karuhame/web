@@ -1,0 +1,507 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+1.làm từ ngoài vào trong
+2.từ trên xuống dưới.
+*/
+
+/*
+1.vị trí
+2.kích thước(width, height)
+3.màu sắc
+4.kiểu dáng(kiểu chữ, hình tròn, hình vuông,...)
+
+*/
+
+#main{
+
+}
+
+.clear{
+    clear:both;
+}
+
+.row{
+    margin-left:  -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content :"";
+    display: block;
+    clear:both;
+}
+
+.col{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third{
+    width: calc(100%/3);
+}
+
+.col-half{
+    width: 50%;
+
+}
+
+.col-full{
+    width: 100%;
+}
+
+.form-control{
+    border: 1px solid #ccc;
+    padding:12px;
+    width: 100%;
+
+}
+
+.modal {
+    position: fixed;
+    max-width: cacl(100%-32px);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    padding: 17px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.modal-label{
+    margin-top :20px ;
+    margin-bottom: 12px;
+    display: block;
+}
+.modal-close:hover{
+    background-color: #ccc;
+    color:#000;
+}
+
+
+button.pay {
+    border: none;
+    background-color: #009688;
+    width: 869px;
+    padding: 16px 15px;
+    margin: 22px 16px;
+    color: white;
+    cursor: pointer;
+}
+button.pay:hover{
+    background-color: #ccc;
+    color:white;
+}
+
+p.modal-help {
+    text-align: right;
+    padding: 2px 16px 22px;
+    cursor: pointer;
+}
+
+.modal-body{
+    padding:0 16px;
+    font-size: 15px;
+}
+
+.modal-container {
+    max-width: cacl(100%-32px);
+    background: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width:cacl(100%-32px);
+    animation: modalFadeIn ease 0.5s;
+}
+.modal-ticket{
+    height: 129px;
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color:white;
+    letter-spacing: 5px;
+}
+
+.modal-heading-icon{
+    margin-right:20px;
+    color:white;
+}
+
+#nav{
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-height: 46px;
+}
+
+#nav,.subnav{
+    list-style-type: none;
+}
+
+#nav>li{
+    display: inline-block;
+    
+}
+
+#nav>li>a{
+    text-transform: uppercase;
+}
+
+#nav li{
+    position: relative;
+}
+
+#nav .nav-arrow-down{
+    font-size:12px;
+}
+
+#nav li a{
+    color: white;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0px 24px;
+    
+    
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li:hover >a,
+#nav>li:hover>a{
+    color:#000;
+    background-color:#ccc;
+    display: block;
+}
+
+#nav .subnav{
+    display: none;  
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px;
+    
+}
+
+#nav .subnav a{
+    color:#000;
+    padding-left:12px;
+    line-height:38px;
+    
+}
+#header .bar-button,
+#header .search-button{
+    color:white;
+    float:right;
+    line-height: 46px;
+    padding: 0 20px;
+    
+}
+#header .bar-button
+#header .search-button:hover {
+    background-color: #f44336;
+    cursor: pointer;
+
+}
+
+#header{
+    height: 46px;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+
+
+}
+
+#slider{
+    position: relative;
+    padding-top: 50%;
+    background-color: green;
+    margin-top:46px ;
+    background: url('/SonKhung/web/w3_band/assets/img/slider1.jpg') top center/ cover no-repeat;
+}
+
+
+#slider .text-content{
+    position:absolute;
+    bottom:47px;
+    color:white;
+    width: 100%;
+    text-align: center;
+
+}
+
+#slider .text-heading{
+    font-size:24px;
+    font-weight:400;
+}
+
+#slider .text-description{
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+
+#content{
+
+}
+
+#content .content-section{
+    padding:64px 16px  ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    max-width: 100%;
+    text-align: justify;
+}
+
+.content-section .section-heading,
+.content-section .section-sub-heading{
+    text-align: center;
+}
+
+.content-section h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 30px;
+    min-height: 45px;
+    margin: 10px 0px;
+    font-weight: 400;
+}
+.content-section .section-sub-heading{
+    font-style: italic;
+    opacity: 0.6;
+    margin:15px 0;
+}
+
+.content-section .about{
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 15px 0;
+    padding-bottom:30px;
+}
+
+#content .member-items{
+    text-align: center  ;
+}
+
+#content .member-list{
+    margin:15px 0;
+}
+
+#content .member-img{
+    margin: 10px 0;
+    width: 153px;
+    border-radius: 4px;
+}
+
+.tour-section{
+    background-color: black;
+}
+
+.tour-section .content-section{
+    color: white;
+}
+
+
+.tour-section ul{
+    
+    list-style: none;
+    background-color: #fff;
+
+}
+
+.tour-section .ticket-list{
+    margin-top:40px;
+
+}
+.content-section .desti-img:hover{
+    opacity: 0.6;
+}
+
+.ticket-list li{
+    color:#757575;
+    font-size:15px;
+    padding:11px 24px;
+    border-bottom: #ddd solid 1px;
+}
+
+.tour-section .sold-out{
+    background-color: #f44336;
+    color:#fff;
+    padding: 2px 8px;
+    margin-left: 16px;
+
+}
+
+.tour-section .quantity{
+    margin-top:-3px;
+    float: right;
+    margin-right: 6px;
+    width: 24px;
+    height: 24px;
+    color:#fff;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+
+}
+
+.desti-list{
+    margin-top: 32px;
+    
+
+}
+
+
+.desti-item .desti-img{
+    width: 100%;
+}
+
+.desti-item .desti-body{
+    background-color: #fff;
+    color: #000;
+    margin-top: -4px;
+    margin-bottom: 70px;
+    padding: 10px 21px 25px 21px;
+    
+
+}
+
+.desti-body .desti-name{
+    margin-bottom:25px;
+    margin-top: 15px;
+    
+    font-weight: 550;
+    
+
+}
+
+.desti-body .desti-date{
+    margin: 15px 0;
+    opacity: 0.6;
+
+}
+
+.desti-body .desti-content{
+    margin: 15px 0;
+    margin-bottom:25px;
+
+}
+
+.desti-body .buy-tickets{
+    margin: 15px 0;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;;
+
+}
+
+.buy-tickets:hover{
+    background-color: #ccc;
+    color:#000;
+    border-color:#ccc;
+
+}
+
+/* contact-form */
+.contact-content{
+    padding-top: 48px;
+}
+
+.contact-content .contact-info{
+    font-size: 18px;
+    list-style: none;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.message{
+    margin-top: 9px;
+    margin-bottom: 4px;
+}
+.send-info{
+    margin: 15px 0;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    float:right;
+    border:none;
+
+}
+
+.send-info:hover{
+    background-color: #ccc;
+    color:#000;
+    border-color:#ccc;
+
+}
+.map{
+    width: 100%;
+}
+#footer{
+    padding:64px 16px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color:rgba(0,0,0,0.6)
+}
+.supporter{
+    margin: 24px 0px;
+}
+.w3{
+    color:rgba(0,0,0,0.6)
+    
+}
+
+@keyframes modalFadeIn{
+    from{
+        transform: translateY(-130px);
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
+#TODO-2: Inside the 'encrypt' function, shift
+each letter of the 'text' forwards in the
+alphabet by the shift amount and print the
+encrypted text.
+alphabet = [
+g',
